@@ -3,53 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Grade Tracker</title>
+    <title>Dynamic Polynomial Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🎓 Student Grade Tracker</h1>
+    <div class="calculator-container">
+        <h1>Polynomial Calculator</h1>
+        <p class="subtitle">Add and multiply polynomials using linked list data structures.</p>
 
-        <div class="input-section">
-            <h2>Add New Student Record</h2>
-            <form id="add-student-form">
-                <input type="number" id="studentID" placeholder="Student ID (e.g., 101)" required min="1">
-                <input type="text" id="studentName" placeholder="Student Name" required>
-                <input type="number" id="studentGrade" placeholder="Grade (0-100)" required min="0" max="100">
-                <button type="submit">➕ Add Student (Sorted)</button>
-            </form>
-        </div>
+        <div class="polynomial-grid">
+            <div class="poly-card">
+                <h2>Polynomial 1</h2>
+                <div class="term-headers">
+                    <span>Coefficient</span>
+                    <span>Exponent</span>
+                    <span></span>
+                </div>
+                <div id="poly1-terms" class="term-list">
+                    </div>
+                <button class="add-term-btn" onclick="addTerm(1)">+ Add Term</button>
+            </div>
 
-        <hr>
-
-        <div class="stats-section">
-            <h2>📊 Class Statistics</h2>
-            <div class="stats-grid">
-                <p>Total Students: <span id="stat-count">0</span></p>
-                <p>Average Grade: <span id="stat-average">0.00</span></p>
-                <p>Highest Grade: <span id="stat-highest">0.00</span></p>
-                <p>Lowest Grade: <span id="stat-lowest">0.00</span></p>
+            <div class="poly-card">
+                <h2>Polynomial 2</h2>
+                <div class="term-headers">
+                    <span>Coefficient</span>
+                    <span>Exponent</span>
+                    <span></span>
+                </div>
+                <div id="poly2-terms" class="term-list">
+                    </div>
+                <button class="add-term-btn" onclick="addTerm(2)">+ Add Term</button>
             </div>
         </div>
 
-        <hr>
+        <div class="polynomial-grid display-area">
+            <div class="poly-card display-card">
+                <h2>Polynomial 1</h2>
+                <p id="poly1-display" class="poly-expression">0</p>
+            </div>
+            <div class="poly-card display-card">
+                <h2>Polynomial 2</h2>
+                <p id="poly2-display" class="poly-expression">0</p>
+            </div>
+        </div>
+        <div class="action-buttons">
+            <button class="action-btn add-op" onclick="calculate('add')">Add Polynomials</button>
+            <button class="action-btn multiply-op" onclick="calculate('multiply')">Multiply Polynomials</button>
+        </div>
 
-        <div class="table-section">
-            <h2>📋 Student Records</h2>
-            <table id="grades-table">
-                <thead>
-                    <tr>
-                        <th>Student ID</th>
-                        <th>Name</th>
-                        <th>Grade</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+        <div class="results-section">
+            <h2>Operation Result:</h2>
+            <p id="result-poly">Click an operation button.</p>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

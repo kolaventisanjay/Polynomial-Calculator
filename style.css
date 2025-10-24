@@ -1,56 +1,155 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #e9ecef;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    min-height: 100vh;
     margin: 0;
-    padding: 20px;
 }
 
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    background-color: #ffffff;
+.calculator-container {
+    background-color: #fff;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 900px;
 }
 
 h1 {
+    color: #4a148c;
     text-align: center;
-    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
     margin-bottom: 30px;
 }
 
-h2 {
-    color: #343a40;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-    margin-top: 20px;
+.polynomial-grid {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
-/* Form Styles */
-#add-student-form input, #add-student-form button {
+.poly-card {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9ff;
+}
+
+.display-card {
+    min-height: 80px; /* Ensure cards have similar height */
+}
+
+.poly-card h2 {
+    text-align: center;
+    color: #6a1b9a;
+    margin-top: 0;
+}
+
+/* Term Input Styles (Remains the same) */
+.term-headers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 30px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.term-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 30px;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.term-row input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.remove-term-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 0;
+    line-height: 1;
+}
+
+.add-term-btn {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
-#add-student-form button {
-    background-color: #28a745;
-    color: white;
+    background-color: #e1bee7;
+    color: #4a148c;
+    border: none;
+    border-radius: 6px;
+    margin-top: 15px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
 }
 
-#add-student-form button:hover {
-    background-color: #218838;
+.add-term-btn:hover {
+    background-color: #ce93d8;
 }
 
-/* Table Styles */
-#grades-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top:
+/* Action Buttons (Remains the same) */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.action-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+}
+
+.add-op {
+    background-color: #7b1fa2;
+}
+
+.multiply-op {
+    background-color: #8e24aa;
+}
+
+/* Result Display Styles */
+.results-section h2 {
+    color: #333;
+}
+
+#result-poly {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #dc3545; /* Changed to red for the final result */
+    padding: 10px 0;
+}
+
+.poly-expression {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #4a148c; /* Purple for input expressions */
+    text-align: center;
+    padding: 10px 0;
+}
