@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #343a40;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+/* Form Styles */
+#add-student-form input, #add-student-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#add-student-form button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#add-student-form button:hover {
+    background-color: #218838;
+}
+
+/* Table Styles */
+#grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top:

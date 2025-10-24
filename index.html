@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Student Grade Tracker</h1>
+
+        <div class="input-section">
+            <h2>Add New Student Record</h2>
+            <form id="add-student-form">
+                <input type="number" id="studentID" placeholder="Student ID (e.g., 101)" required min="1">
+                <input type="text" id="studentName" placeholder="Student Name" required>
+                <input type="number" id="studentGrade" placeholder="Grade (0-100)" required min="0" max="100">
+                <button type="submit">➕ Add Student (Sorted)</button>
+            </form>
+        </div>
+
+        <hr>
+
+        <div class="stats-section">
+            <h2>📊 Class Statistics</h2>
+            <div class="stats-grid">
+                <p>Total Students: <span id="stat-count">0</span></p>
+                <p>Average Grade: <span id="stat-average">0.00</span></p>
+                <p>Highest Grade: <span id="stat-highest">0.00</span></p>
+                <p>Lowest Grade: <span id="stat-lowest">0.00</span></p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="table-section">
+            <h2>📋 Student Records</h2>
+            <table id="grades-table">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
